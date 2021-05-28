@@ -1,0 +1,84 @@
+html {
+  background: url('../imgs/home-background.svg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: black;
+  background: orange;
+}
+
+::selection {
+  color: black;
+  background: orange;
+}
+
+.container {
+  max-width: 100rem;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1.5px solid #333;
+}
+
+.news {
+  max-width: 45rem;
+  display: flex;
+  margin: auto;
+}
+
+.grid-container {
+  color: rgb(219, 219, 219);
+  background: #362b2b;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 1rem;
+  box-shadow: 5px 5px 5px #121212;
+}
+
+.items {
+  max-width: 33rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(219, 219, 219);
+  margin: 10px auto;
+  padding: 15px 10px;
+  background-color: #362b2b;
+  border-radius: 10px;
+}
+
+.items p {
+  margin: 0;
+}
+
+.post {
+  max-width: 35rem;
+  color: rgb(219, 219, 219);
+  margin: 10px auto;
+  padding: 5px 20px;
+  background-color: #362b2b;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .news {
+    flex-direction: column;
+  }
+}
