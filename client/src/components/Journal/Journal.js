@@ -5,7 +5,7 @@ import { CircularProgress } from '@material-ui/core';
 import Posts from './Post/Posts';
 import { useAuth } from '../../AuthContext';
 
-const URI = 'https://myday-posts.vercel.app/posts/';
+const URI = '/posts/';
 
 const Journal = () => {
   const { currentUser } = useAuth();
