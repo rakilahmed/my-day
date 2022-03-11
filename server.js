@@ -15,13 +15,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const apiRoutes = require('./routes/data-routes.js');
-app.use(apiRoutes);
+app.use('/api/posts/', apiRoutes);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static('client/build'));
 
   app.get('*', (_, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build'))
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
   });
 }
 

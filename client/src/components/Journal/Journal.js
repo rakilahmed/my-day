@@ -5,7 +5,7 @@ import { CircularProgress } from '@material-ui/core';
 import Posts from './Post/Posts';
 import { useAuth } from '../../AuthContext';
 
-const URI = '/posts/';
+const URI = '/api/posts/';
 
 const Journal = () => {
   const { currentUser } = useAuth();

@@ -2,11 +2,7 @@ const express = require('express');
 const router = express.Router();
 const postData = require('../models/Post-Data');
 
-// router.get('/', (req, res) => {
-//   res.redirect('/posts');
-// });
-
-router.get('/posts', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const allPosts = await postData.find();
     res.send(allPosts);
@@ -15,7 +11,7 @@ router.get('/posts', async (req, res) => {
   }
 });
 
-router.get('/posts/:uid', async (req, res) => {
+router.get('/:uid', async (req, res) => {
   const userId = req.params.uid;
   try {
     const userPosts = await postData.find({ uid: userId });
@@ -25,14 +21,14 @@ router.get('/posts/:uid', async (req, res) => {
   }
 });
 
-router.post('/posts', async (req, res) => {
+router.post('/', async (req, res) => {
   const data = req.body;
   const post = new postData(data);
   await post.save();
   res.send(post);
 });
 
-router.put('/posts/:uid/:pId', async (req, res) => {
+router.put('/:uid/:pId', async (req, res) => {
   const userId = req.params.uid;
   const postId = req.params.pId;
   let post;
@@ -45,7 +41,7 @@ router.put('/posts/:uid/:pId', async (req, res) => {
   }
 });
 
-router.delete('/posts/:uid', async (req, res) => {
+router.delete('/:uid', async (req, res) => {
   const userId = req.params.uid;
   try {
     const post = await postData.findOne({ uid: userId });
@@ -56,7 +52,7 @@ router.delete('/posts/:uid', async (req, res) => {
   }
 });
 
-router.delete('/posts/:uid/:pId', async (req, res) => {
+router.delete('/:uid/:pId', async (req, res) => {
   const userId = req.params.uid;
   const postId = req.params.pId;
   try {
