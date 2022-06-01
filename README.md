@@ -1,5 +1,8 @@
 # myDay
 
-## Live: https://myday-demo.vercel.app
+## Live
 
-This is a full-stack web app which allows user to add tasks, events and post entries on a digital journal. It uses firebase for authentication and to store users tasks and events. And for journal posts, it uses MongoDB running in a backend server. Both backend and frontend, hosted on Vercel.
+https://myday-demo.vercel.app
+
+## About
+A small MERN stack web app which allows authenticated users to add tasks, events, and create journal entries. The purpose of this application is to have everything related to productivity in one place to simply the users’ day-to-day needs. 
